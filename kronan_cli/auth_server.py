@@ -7,7 +7,7 @@ from urllib.parse import parse_qs, urlparse
 
 import httpx
 
-from app.client import COGNITO_CLIENT_ID, COGNITO_DOMAIN, COGNITO_REGION
+from kronan_cli.client import COGNITO_CLIENT_ID, COGNITO_DOMAIN, COGNITO_REGION
 
 # Cognito OAuth2 endpoints
 COGNITO_TOKEN_URL = f"https://{COGNITO_DOMAIN}/oauth2/token"

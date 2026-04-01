@@ -6,8 +6,8 @@ import click
 from rich.console import Console
 from rich.table import Table
 
-from app import config
-from app.client import KronanClient
+from kronan_cli import config
+from kronan_cli.client import KronanClient
 
 console = Console()
 
@@ -58,7 +58,7 @@ def login(token: str | None) -> None:
         console.print(f"Config saved to {config.CONFIG_FILE}")
         return
 
-    from app.auth_server import run_auth_server
+    from kronan_cli.auth_server import run_auth_server
 
     console.print("Opening browser for Kronan login...")
     result = run_auth_server()
